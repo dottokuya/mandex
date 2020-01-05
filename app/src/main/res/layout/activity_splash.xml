@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:background="@color/splashBackground"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <ImageView
+        android:id="@+id/logo_id"
+        android:layout_width="80.0dip"
+        android:layout_height="80.0dip"
+        android:src="@drawable/mdlogo"
+        android:layout_centerInParent="true" />
+    <TextView
+        android:textSize="25.0dip"
+        android:textColor="#fffcfdff"
+        android:id="@+id/md_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MangaDex"
+        android:layout_below="@id/logo_id"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/custom"
+        app:fontFamily="@font/custom" />
+    <TextView
+        android:textSize="14.0dip"
+        android:textColor="#fffcfdff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Web Wrapper"
+        android:layout_below="@id/md_name"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/custom" />
+</RelativeLayout>
