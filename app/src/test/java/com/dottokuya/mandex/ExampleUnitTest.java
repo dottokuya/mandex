@@ -1,4 +1,4 @@
-package com.example.mandex;
+package com.dottokuya.mandex;
 
 import org.junit.Test;
 

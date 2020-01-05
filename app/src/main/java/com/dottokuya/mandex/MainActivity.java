@@ -1,4 +1,4 @@
-package com.example.mandex;
+package com.dottokuya.mandex;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
