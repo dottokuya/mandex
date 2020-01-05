@@ -12,23 +12,24 @@
         android:src="@drawable/mdlogo"
         android:layout_centerInParent="true" />
     <TextView
-        android:textSize="25.0dip"
+        android:textSize="25sp"
         android:textColor="#fffcfdff"
         android:id="@+id/md_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="MangaDex"
+        android:text="@string/app_name"
         android:layout_below="@id/logo_id"
         android:layout_centerHorizontal="true"
         android:fontFamily="@font/custom"
         app:fontFamily="@font/custom" />
     <TextView
-        android:textSize="14.0dip"
+        android:textSize="14sp"
         android:textColor="#fffcfdff"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Web Wrapper"
+        android:text="@string/wrapper"
         android:layout_below="@id/md_name"
         android:layout_centerHorizontal="true"
-        android:fontFamily="@font/custom" />
+        android:fontFamily="@font/custom"
+        app:fontFamily="@font/custom"/>
 </RelativeLayout>

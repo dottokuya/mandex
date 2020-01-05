@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MangaDex</string>
+    <string name="wrapper">Web Wrapper</string>
 </resources>
