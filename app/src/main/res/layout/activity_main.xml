@@ -3,17 +3,18 @@
     android:id="@+id/activity_main"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
-    <androidx.core.widget.SwipeRefreshLayout
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    <!--<androidx.core.widget.SwipeRefreshLayout
         android:id="@+id/swipe"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <WebView
-            android:id="@+id/webview"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent" />
 
-    </androidx.core.widget.SwipeRefreshLayout>
+
+    </androidx.core.widget.SwipeRefreshLayout>-->
 
     <ProgressBar
         android:id="@+id/progressBar"
