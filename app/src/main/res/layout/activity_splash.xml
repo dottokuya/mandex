@@ -3,14 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:gravity="center"
     android:background="@color/splashBackground"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <ImageView
         android:id="@+id/logo_id"
         android:layout_width="80.0dip"
         android:layout_height="80.0dip"
-        android:src="@drawable/mdlogo"
-        android:layout_centerInParent="true" />
+        app:srcCompat="@drawable/mdlogo"
+        android:layout_centerInParent="true"
+        android:contentDescription="@string/desc"/>
     <TextView
         android:textSize="25sp"
         android:textColor="#fffcfdff"
@@ -23,6 +24,7 @@
         android:fontFamily="@font/custom"
         app:fontFamily="@font/custom" />
     <TextView
+        android:id="@+id/wrap"
         android:textSize="14sp"
         android:textColor="#fffcfdff"
         android:layout_width="wrap_content"
