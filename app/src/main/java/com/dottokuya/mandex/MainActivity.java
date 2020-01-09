@@ -5,29 +5,21 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 import androidx.appcompat.app.AppCompatActivity;
-//import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
 
 public class MainActivity extends AppCompatActivity {
     private WebView mywebView;
-    //private SwipeRefreshLayout swipe;
     private ProgressBar progress;
 
     /* access modifiers changed from: protected */
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView((int) R.layout.activity_main);
-        /* swipe = (SwipeRefreshLayout) findViewById(R.id.swipe);
-        swipe.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-            @Override
-            public void onRefresh() {
-
-                mywebView.reload();
-            }
-        }); */
         LoadWeb();
     }
     public void LoadWeb(){
@@ -35,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
         this.progress = (ProgressBar) findViewById(R.id.progressBar);
         this.mywebView.getSettings().setJavaScriptEnabled(true);
         this.mywebView.loadUrl("https://mangadex.cc/");
-        // swipe.setRefreshing(true);
         this.mywebView.setWebViewClient(new WebViewClient() {
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
                 String main_url = "https://mangadex.cc";
@@ -55,10 +46,21 @@ public class MainActivity extends AppCompatActivity {
             public void onPageFinished(WebView view, String url) {
                 if (progress != null)
                     MainActivity.this.progress.setVisibility(View.GONE);
-                // swipe.setRefreshing(false);
             }
 
         });
+
+        mywebView.setWebChromeClient(new WebChromeClient() {
+            public void onProgressChanged(WebView view, int newProgress){
+                // Update the progress bar with page loading progress
+                progress.setProgress(newProgress);
+                if(newProgress == 100){
+                    // Hide the progressbar
+                    progress.setVisibility(View.GONE);
+                }
+            }
+        });
+
     }
 
     public void onBackPressed() {
