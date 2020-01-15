@@ -26,10 +26,10 @@ public class MainActivity extends AppCompatActivity {
         this.mywebView = (WebView) findViewById(R.id.webview);
         this.progress = (ProgressBar) findViewById(R.id.progressBar);
         this.mywebView.getSettings().setJavaScriptEnabled(true);
-        this.mywebView.loadUrl("https://mangadex.cc/");
+        this.mywebView.loadUrl("https://mangadex.org/");
         this.mywebView.setWebViewClient(new WebViewClient() {
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                String main_url = "https://mangadex.cc";
+                String main_url = "https://mangadex.org";
                 if (url != null && url.startsWith(main_url)) {
                     return false;
                 }
