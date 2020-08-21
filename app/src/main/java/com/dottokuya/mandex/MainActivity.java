@@ -9,6 +9,7 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 
@@ -16,21 +17,30 @@ public class MainActivity extends AppCompatActivity {
     private WebView mywebView;
     private ProgressBar progress;
 
+
+    String defaultUrl = "https://mangadex.org";
+
     /* access modifiers changed from: protected */
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView((int) R.layout.activity_main);
-        LoadWeb();
+        Intent intent = getIntent();
+        Uri data = intent.getData();
+        if (data == null)
+            LoadWeb(defaultUrl);
+        else
+            LoadWeb(data.toString());
+
     }
-    public void LoadWeb(){
+    public void LoadWeb(String url){
         this.mywebView = (WebView) findViewById(R.id.webview);
         this.progress = (ProgressBar) findViewById(R.id.progressBar);
         this.mywebView.getSettings().setJavaScriptEnabled(true);
-        this.mywebView.loadUrl("https://mangadex.org/");
+        this.mywebView.loadUrl(url);
         this.mywebView.setWebViewClient(new WebViewClient() {
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                String main_url = "https://mangadex.org";
-                if (url != null && url.startsWith(main_url)) {
+                String mainUrl = "https://mangadex.org";
+                if (url != null && url.startsWith(mainUrl)) {
                     return false;
                 }
                 view.getContext().startActivity(new Intent("android.intent.action.VIEW", Uri.parse(url)));
