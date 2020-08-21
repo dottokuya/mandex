@@ -41,8 +41,7 @@ public class MainActivity extends AppCompatActivity {
         this.mywebView.loadUrl(url);
         this.mywebView.setWebViewClient(new WebViewClient() {
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                String mainUrl = "https://mangadex.org";
-                if (url != null && url.startsWith(mainUrl)) {
+                if (url != null && url.startsWith(defaultUrl)) {
                     return false;
                 }
                 view.getContext().startActivity(new Intent("android.intent.action.VIEW", Uri.parse(url)));
