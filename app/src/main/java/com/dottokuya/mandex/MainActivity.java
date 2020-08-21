@@ -1,5 +1,6 @@
 package com.dottokuya.mandex;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
             LoadWeb(data.toString());
 
     }
+    @SuppressLint("SetJavaScriptEnabled")
     public void LoadWeb(String url){
         this.mywebView = (WebView) findViewById(R.id.webview);
         this.progress = (ProgressBar) findViewById(R.id.progressBar);
