@@ -1,3 +1,4 @@
+
 # MangaDex Web Wrapper for Android
 
 Web wrapper of MangaDex to work as an Android app (aka a Twitter Lite clone). You can apply this wrapper to your web app too.
@@ -29,3 +30,4 @@ Web wrapper of MangaDex to work as an Android app (aka a Twitter Lite clone). Yo
         </activity>```
   + In MainActivity.java
     `string defaultUrl = "*Insert your URL here with HTTP prefix*";`
+

@@ -30,13 +30,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView((int) R.layout.activity_main);
-        progress = (ProgressBar) findViewById(R.id.progressBar);
+        setContentView(R.layout.activity_main);
+        progress = findViewById(R.id.progressBar);
         progress.setMax(100);
-        mywebView = (WebView) findViewById(R.id.webview);
+        mywebView = findViewById(R.id.webview);
         mywebView.setWebViewClient(new WebViewClientDemo());
         mywebView.setWebChromeClient(new WebChromeClientDemo());
-        mySwipeRefreshLayout = (SwipeRefreshLayout) this.findViewById(R.id.swiperefresh);
+        mySwipeRefreshLayout = this.findViewById(R.id.swiperefresh);
         mySwipeRefreshLayout.setOnRefreshListener(
                 new SwipeRefreshLayout.OnRefreshListener() {
                     @Override
@@ -122,8 +122,8 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
         else {
+            return super.onKeyDown(keyCode, event);
         }
-        return super.onKeyDown(keyCode, event);
     }
 
 
