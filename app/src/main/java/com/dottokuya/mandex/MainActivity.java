@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private SwipeRefreshLayout mySwipeRefreshLayout;
 
 
-    String defaultUrl = "https://mangadex.org";
+    private String defaultUrl = "https://mangadex.org";
 
     /* access modifiers changed from: protected */
     @SuppressLint("SetJavaScriptEnabled")
@@ -53,8 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void manageIntent(Intent intent) {
         // ATTENTION: This was auto-generated to handle app links.
-        Intent appLinkIntent = intent;
-        Uri appLinkData = appLinkIntent.getData();
+        Uri appLinkData = intent.getData();
 
         if (getIntent().getExtras() != null) {
             if (appLinkData == null) {
@@ -81,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
             super.onReceivedError(view, errorCode, description, failingUrl);
             Toast.makeText(getApplicationContext(), R.string.no_internet, Toast.LENGTH_LONG).show();
         }
+
         @Override
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
             Uri uri = Uri.parse(url);
