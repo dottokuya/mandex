@@ -1,7 +1,7 @@
 
 # MangaDex Web Wrapper for Android
 
-Web wrapper of MangaDex to work as an Android app (aka a Twitter Lite clone). You can apply this wrapper to your web app too.
+Web wrapper of MangaDex to work as an Android app. You can apply this wrapper to your web app too.
 
 ## Features
 - Wrap the web app inside a single WebView and act like a standalone app (assume your web app is already a SPA/PWA/functional mobile-friendly website)
