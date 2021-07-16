@@ -1,7 +1,9 @@
 
-# MangaDex Web Wrapper for Android
+# (OBSOLESTE) MangaDex Web Wrapper for Android
 
 Web wrapper of MangaDex to work as an Android app. You can apply this wrapper to your web app too.
+
+OBSOLESTE NOTE: MangaDex are back with a new backend and UI, and it's on the way becoming a PWA, so this thing is no longer needed.
 
 ## Features
 - Wrap the web app inside a single WebView and act like a standalone app (assume your web app is already a SPA/PWA/functional mobile-friendly website)
